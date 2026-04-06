@@ -14,8 +14,7 @@ img {
   max-width:100%;
   vertical-align:bottom;
 }
-
-ul {
+li {
   list-style:none;
 }
 
@@ -100,11 +99,10 @@ magazine
     margin: 0 auto;
 }
 
-#magazine .flex-item .text .title {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+#magazine .flex-item .item .title {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
 }
-
 /* -----------------------
 fashion
 ------------------------ */
@@ -156,8 +154,48 @@ catalog-antique
     margin-bottom: 0;
 }
 
+/* ------------------
+footer
+------------------------ */
 
+#footer {
+    background-color: #333333;
+    font-size: 0.75rem;
+}
 
+#footer .flex-item {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footer .item {
+    width: 33%;
+    line-height: 2;
+}
+
+#footer .item:first-child {
+  padding: 60px 0;
+}
+
+#footer .flex-item .item .title {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#footer .item li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
+#footer .copyright{
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+}
 
 
 
@@ -165,4 +203,53 @@ catalog-antique
 
 @media screen and (max-width: 896px) {
 
+    #magazine .flex-item {
+        flex-direction: column;
+    }
+
+    #magazine .flex-item .item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #magazine .flex-item .item:last-child {
+        margin-bottom: 0;
+    }
+
+    #fashion {
+        margin-bottom: 55px;
+    }
+
+    .catalog-antique .flex-item {
+        flex-direction: column;
+    }
+
+.catalog-antique {
+    padding: 30px 0;
+}
+
+.catalog-antique .flex-item .item {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.catalog-antique .flex-item .item:last-child {
+    margin-bottom: 0;
+}  
+
+#footer .flex-item {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #footer .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #footer .item:first-child {
+    text-align: center;
+    padding: 0;
+
+  }
+  
 }
